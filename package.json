@@ -1,0 +1,36 @@
+{
+  "name": "cordova-plugin-audio-recorder",
+  "version": "1.0.0",
+  "description": "A Cordova plugin to record audio on Android and iOS",
+  "author": "Aayush Shrivastava",
+  "license": "MIT",
+  "keywords": [
+    "cordova",
+    "plugin",
+    "audio",
+    "recorder",
+    "android",
+    "ios"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aayushshrivastava0709/AudioRecorderForOutsystems.git"
+  },
+  "engines": {
+    "cordova": ">=10.0.0",
+    "cordova-android": ">=9.0.0",
+    "cordova-ios": ">=6.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/aayushshrivastava0709/AudioRecorderForOutsystems/issues"
+  },
+  "homepage": "https://github.com/aayushshrivastava0709/AudioRecorderForOutsystems#readme",
+  "dependencies": {},
+  "cordova": {
+    "id": "cordova-plugin-audio-recorder",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}
