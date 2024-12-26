@@ -1,0 +1,35 @@
+# Node.js modules
+node_modules/
+
+# Cordova/PhoneGap build files
+platforms/
+plugins/
+
+# Cordova/PhoneGap config file
+config.xml
+
+# Cordova build output
+www/
+
+# Cordova logs and temporary files
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Android build files
+*.apk
+*.dex
+*.class
+*.jar
+*.keystore
+
+# iOS build files
+*.xcodeproj
+*.xcworkspace
+*.hmap
+*.ipa
+
+# Cordova generated files
+cordova-lib/
+package-lock.json
