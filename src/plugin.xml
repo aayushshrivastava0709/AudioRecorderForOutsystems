@@ -1,0 +1,15 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="audio.recorder.plugin"
+        version="1.0.0">
+    <name>Audio Recorder Plugin</name>
+    <description>Advanced audio recording plugin for Cordova and OutSystems.</description>
+    <platform name="android">
+        <source-file src="src/android/AudioRecorder.java" target-dir="src/com/audio/recorder" />
+    </platform>
+    <platform name="ios">
+        <source-file src="src/ios/AudioRecorder.swift" />
+    </platform>
+    <js-module src="www/audio-recorder.js" name="AudioRecorder">
+        <clobbers target="cordova.plugins.audioRecorder" />
+    </js-module>
+</plugin>
