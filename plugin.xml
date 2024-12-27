@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-audiorecorder"
+        version="1.0.0">
+
+    <!-- Plugin Name and Metadata -->
+    <name>AudioRecorderForOutsystems</name>
+    <description>Allows the app to record audio on Android and iOS devices.</description>
+    <license>MIT</license>
+    <keywords>cordova, audio, recorder, microphone</keywords>
+    <repo>https://github.com/aayushshrivastava0709/AudioRecorderForOutsystems</repo>
+    <issue>https://github.com/aayushshrivastava0709/AudioRecorderForOutsystems/issues</issue>
+
+    <!-- Cordova engine compatibility -->
+    <engines>
+        <engine name="cordova" version=">=10.0.0"/>
+    </engines>
+
+    <!-- JavaScript module -->
+    <js-module src="www/audiorecorder.js" name="audioRecorder">
+        <clobbers target="window.plugins.audioRecorder" />
+    </js-module>
+
+    <!-- Android Platform -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AudioRecorder">
+                <param name="android-package" value="com.aayushshrivastava.cordova.plugin.AudioRecorder"/>
+            </feature>
+        </config-file>
+        
+        <!-- Android Source Code -->
+        <source-file src="src/android/AudioRecorder.java" target-dir="src/com/aayushshrivastava/cordova/plugin" />
+        
+        <!-- Android Permissions -->
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+    </platform>
+
+    <!-- iOS Platform -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="AudioRecorder">
+                <param name="ios-package" value="AudioRecorder"/>
+            </feature>
+        </config-file>
+        
+        <!-- iOS Source Code -->
+        <source-file src="src/ios/AudioRecorder.swift" target-dir="src/com/aayushshrivastava/cordova/plugin" />
+        
+        <!-- iOS Permissions -->
+        <config-file target="Info.plist" parent="/*">
+            <key>NSMicrophoneUsageDescription</key>
+            <string>This app needs access to the microphone for recording audio.</string>
+        </config-file>
+    </platform>
+</plugin>
